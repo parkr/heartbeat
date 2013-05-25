@@ -2,6 +2,7 @@ require 'csv'
 require 'rmagick'
 require 'active_support/all'
 require 'rvideo'
+require './rvideo_fix'
 abort "heartbeat.mov doesn't exist" unless File.size?("heartbeat.mov")
 vid = RVideo::Inspector.new(:file => "heartbeat.mov")
 @raw_response = `ffmpeg -i heartbeat.mox 2>&1`
